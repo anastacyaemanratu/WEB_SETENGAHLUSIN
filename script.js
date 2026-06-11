@@ -78,3 +78,42 @@ star.remove();
 }
 
 setInterval(createShootingStar,1000);
+
+function createShootingStar() {
+  const star = document.createElement("div");
+
+  star.style.position = "fixed";
+  star.style.top = Math.random() * window.innerHeight * 0.5 + "px";
+  star.style.left = "-200px";
+
+  star.style.width = "200px";
+  star.style.height = "3px";
+
+  star.style.background =
+    "linear-gradient(to right, white, rgba(255,255,255,0))";
+
+  star.style.boxShadow =
+    "0 0 10px white, 0 0 20px white, 0 0 40px white";
+
+  star.style.transform = "rotate(25deg)";
+  star.style.zIndex = "99999";
+
+  document.body.appendChild(star);
+
+  let pos = -200;
+
+  const interval = setInterval(() => {
+    pos += 20;
+
+    star.style.left = pos + "px";
+    star.style.top =
+      parseFloat(star.style.top) + 8 + "px";
+
+    if (pos > window.innerWidth + 300) {
+      clearInterval(interval);
+      star.remove();
+    }
+  }, 16);
+}
+
+setInterval(createShootingStar, 1000);
