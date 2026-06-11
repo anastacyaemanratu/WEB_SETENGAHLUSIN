@@ -1,7 +1,5 @@
 const stars=document.getElementById('stars');
 
-/* BINTANG */
-
 for(let i=0;i<600;i++){
 
 const star=document.createElement('div');
@@ -20,9 +18,6 @@ star.style.animationDelay=Math.random()*3+'s';
 
 stars.appendChild(star);
 
-}
-
-/* BINTANG JATUH */
 
 function createShootingStar(){
 
