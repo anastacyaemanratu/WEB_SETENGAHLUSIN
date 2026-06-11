@@ -114,36 +114,5 @@ star.animate(
 transform:
 "translate(0,0) rotate(25deg)",
 opacity:1
-},
-{
-transform:
-"translate(1800px,800px) rotate(25deg)",
-opacity:0
-}
-],
-{
-duration:2200,
-easing:"linear"
-}
-);
-
-setTimeout(() => {
-
-```
-star.remove();
-
-const randomDelay =
-  Math.random() * 6000 + 3000;
-
-setTimeout(createShootingStar,
-  randomDelay);
-```
-
-},2200);
-}
-
-/* mulai */
-createShootingStar();
-
 
 setInterval(createShootingStar, 1000);
