@@ -21,18 +21,41 @@ stars.appendChild(star);
 
 function createShootingStar(){
 
-const star=document.createElement('div');
+const star = document.createElement("div");
 
-star.className='shooting-star';
+star.classList.add("shooting-star");
 
-star.style.width=(Math.random()*250+100)+'px';
+const size = Math.random()*250+150;
 
-star.style.top=(Math.random()*40)+'%';
+star.style.width = size + "px";
 
-star.style.left='-300px';
+star.style.top = Math.random()*50 + "%";
+
+star.style.left = "-300px";
 
 document.body.appendChild(star);
 
+star.animate([
+{
+transform:"translate(0,0) rotate(25deg)",
+opacity:1
+},
+{
+transform:"translate(2200px,1000px) rotate(25deg)",
+opacity:0
+}
+],{
+duration:3000,
+easing:"linear"
+});
+
+setTimeout(()=>{
+star.remove();
+},3000);
+
+}
+
+setInterval(createShootingStar,800);
 star.animate(
 [
 {
