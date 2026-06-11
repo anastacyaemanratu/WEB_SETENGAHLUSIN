@@ -72,11 +72,15 @@ opacity:1;
 
 .shooting-star{
 position:fixed;
-height:2px;
-background:linear-gradient(90deg,#fff,transparent);
+height:3px;
+background:linear-gradient(90deg,#ffffff,transparent);
 border-radius:999px;
 pointer-events:none;
-z-index:-2;
+z-index:999;
+box-shadow:
+0 0 10px white,
+0 0 20px white,
+0 0 40px white;
 }
 
 
