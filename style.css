@@ -14,7 +14,6 @@ min-height:100vh;
 padding:20px;
 }
 
-/* GALAXY */
 
 .galaxy{
 position:fixed;
@@ -49,8 +48,6 @@ transform:scale(1.08);
 }
 }
 
-/* STARS */
-
 .stars{
 position:fixed;
 inset:0;
@@ -73,8 +70,6 @@ opacity:1;
 }
 }
 
-/* SHOOTING STAR */
-
 .shooting-star{
 position:fixed;
 height:2px;
@@ -84,7 +79,6 @@ pointer-events:none;
 z-index:-2;
 }
 
-/* HEADER */
 
 h1{
 font-family:'Cinzel',serif;
@@ -98,7 +92,6 @@ opacity:.8;
 margin-top:10px;
 }
 
-/* SATURN */
 
 .saturn-section{
 display:flex;
@@ -154,7 +147,7 @@ transform:translateY(-12px);
 }
 }
 
-/* CARDS */
+
 
 .music-card,
 .verse-card{
@@ -172,7 +165,7 @@ border-radius:20px;
 border:1px solid rgba(255,255,255,.15);
 }
 
-/* SOCIAL */
+
 
 .socials{
 margin:30px 0;
@@ -200,7 +193,7 @@ transition:.3s;
 transform:translateY(-4px);
 }
 
-/* FRIENDS */
+
 
 .friends{
 max-width:500px;
@@ -238,4 +231,3 @@ box-shadow:
 footer{
 margin-top:60px;
 padding-bottom:40px;
-}
