@@ -77,43 +77,73 @@ star.remove();
 
 }
 
-setInterval(createShootingStar,1000);
+/* ==========================
+BINTANG JATUH PREMIUM
+========================== */
 
 function createShootingStar() {
-  const star = document.createElement("div");
 
-  star.style.position = "fixed";
-  star.style.top = Math.random() * window.innerHeight * 0.5 + "px";
-  star.style.left = "-200px";
+const star = document.createElement("div");
 
-  star.style.width = "200px";
-  star.style.height = "3px";
+star.className = "shooting-star";
 
-  star.style.background =
-    "linear-gradient(to right, white, rgba(255,255,255,0))";
+const startY = Math.random() * 250;
 
-  star.style.boxShadow =
-    "0 0 10px white, 0 0 20px white, 0 0 40px white";
+star.style.position = "fixed";
+star.style.top = startY + "px";
+star.style.left = "-250px";
 
-  star.style.transform = "rotate(25deg)";
-  star.style.zIndex = "99999";
+star.style.width = "180px";
+star.style.height = "2px";
 
-  document.body.appendChild(star);
+star.style.background =
+"linear-gradient(to right, white, transparent)";
 
-  let pos = -200;
+star.style.borderRadius = "999px";
 
-  const interval = setInterval(() => {
-    pos += 20;
+star.style.boxShadow =
+"0 0 8px white, 0 0 20px white";
 
-    star.style.left = pos + "px";
-    star.style.top =
-      parseFloat(star.style.top) + 8 + "px";
+star.style.zIndex = "9999";
 
-    if (pos > window.innerWidth + 300) {
-      clearInterval(interval);
-      star.remove();
-    }
-  }, 16);
+document.body.appendChild(star);
+
+star.animate(
+[
+{
+transform:
+"translate(0,0) rotate(25deg)",
+opacity:1
+},
+{
+transform:
+"translate(1800px,800px) rotate(25deg)",
+opacity:0
 }
+],
+{
+duration:2200,
+easing:"linear"
+}
+);
+
+setTimeout(() => {
+
+```
+star.remove();
+
+const randomDelay =
+  Math.random() * 6000 + 3000;
+
+setTimeout(createShootingStar,
+  randomDelay);
+```
+
+},2200);
+}
+
+/* mulai */
+createShootingStar();
+
 
 setInterval(createShootingStar, 1000);
